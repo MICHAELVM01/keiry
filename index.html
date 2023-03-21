@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="assets/icon.ico">
+    <title>Keity</title>
+</head>
+<body>
+    <div class="logincontainer">
+        <div class="login">
+           
+             <h2 class="text">¿Quieres abrir este regalito?</h2>
+             <div class="img-container2">
+                <img class="img-love2" src="love2.jpg" alt="">
+             </div>
+            
+             <div class="container-button">
+                <div class="buttom yes">
+                    <a >Si</a>
+                 </div>
+                 <div id="btnNo" class="buttom no">
+                    <p href="">No</p>
+                 </div>
+             </div>
+            
+      
+            
+        </div>
+
+    </div>
+   <script>
+       const button2 = document.querySelector('.yes');
+        
+        button2.addEventListener('click', () => {
+            Swal.fire({
+               
+                html:
+                '<div class="container-yes"> <h2>El amor, cuando cabe en una sola flor es infinito</h2> <div class="container-img"><img class="img-love" src="love.jpg" alt=""> </div> <p> Te quiero Keity (ɔ◔‿◔)ɔ ♥      </p></div>',
+              
+              
+                confirmButtonText: `Aceptar`,
+                
+               
+        
+                })
+
+    
+        })
+
+        const button1 = document.querySelector('.no');
+        
+        button1.addEventListener('click', ()=> {
+            width = window.innerWidth - 150;
+            height = window.innerHeight - 150;
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeight + "px";
+        })
+
+     
+   </script>
+</body>
+</html>
